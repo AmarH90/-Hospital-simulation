@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html leng="en" >
+    <head>
+        <title>Mini blog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="favicon.ico/favicon.com.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Up</button>
+    <ul class="topnav">
+        <li><a class="active" href="../Zavrsni_projekat/Pocetna8.html">Home</a></li>
+        <li class="right"><a href="https://www.who.int/">WHO</a></li>
+    </ul>
+    <div class="container1">
+        <p>
+            <h2></h2>
+        </p>
+    </div>
+    <div class="container2">
+        <p><h3>Lorem Ipsum</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo egestas, porttitor augue sed, cursus erat. Mauris rutrum dapibus tempus. Nam in interdum est, quis ornare mi. Quisque nec volutpat felis. Morbi tincidunt nisl ex, sed euismod ante blandit sit amet. Vivamus eros magna, sollicitudin nec luctus a, tempor at lorem. Donec in libero id libero egestas porta. Nam blandit porta tortor, non vestibulum turpis cursus quis. Suspendisse eleifend, dui placerat tempor finibus, nunc tellus iaculis ligula, sed tincidunt nisl mi non eros. Aenean vitae dui hendrerit, efficitur magna hendrerit, semper quam. Sed condimentum ex a elit auctor hendrerit. Aliquam tellus massa, ullamcorper ut interdum efficitur, pellentesque sed diam. Integer iaculis lobortis venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel orci congue ex interdum sollicitudin.
+        </p>
+        <p><h3>Lorem Ipsum</h3>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed justo egestas, porttitor augue sed, cursus erat. Mauris rutrum dapibus tempus. Nam in interdum est, quis ornare mi. Quisque nec volutpat felis. Morbi tincidunt nisl ex, sed euismod ante blandit sit amet. Vivamus eros magna, sollicitudin nec luctus a, tempor at lorem. Donec in libero id libero egestas porta. Nam blandit porta tortor, non vestibulum turpis cursus quis. Suspendisse eleifend, dui placerat tempor finibus, nunc tellus iaculis ligula, sed tincidunt nisl mi non eros. Aenean vitae dui hendrerit, efficitur magna hendrerit, semper quam. Sed condimentum ex a elit auctor hendrerit. Aliquam tellus massa, ullamcorper ut interdum efficitur, pellentesque sed diam. Integer iaculis lobortis venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vel orci congue ex interdum sollicitudin.
+        </p>
+    <fieldset>
+        <legend>Enter ID </legend>
+        <label>Send id: </label>
+        <input type="text" id="id_korisnika">
+        <br>
+        <button onclick="checkForName()">Check</button>
+            <br>
+            <p id="response"></p>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="crossorigin="anonymous"></script>
+            <script type="text/javascript">
+                function checkForName() {
+                    var id_korisnika = $('#id_korisnika').val();
+                    $.get("http://127.0.0.1:8080/?id_korisnika="+id_korisnika, function (data) {
+                        $("#response").text(data);
+                            }).fail(function(err){
+                    $("#response").text(err.responseText);
+                });
+            }             
+            </script>
+    </fieldset>
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+    <a href="https://imgflip.com/i/645uqu"><img src="https://i.imgflip.com/645uqu.jpg" title="made at imgflip.com"/></a><div><a href="https://imgflip.com/memegenerator">from Imgflip Meme Generator</a></div>
+    <div class="container3">
+            <h2>copyright &copy: By Amar</h2>
+    </div>
+    </body>
+</html>
